@@ -1,0 +1,383 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0.5em 1em;
+    background-image: url(./img/backgroundMain.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ 
+/*ESTILOS MODO OSCURO*/
+/*body .cambiarModo{
+    margin: 0.5em 1em;
+    background:#424040;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+ 
+}*/
+
+/*comienza header*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F0EBE3;
+    height: 6em;
+    padding: 0.5rem 1rem;
+}
+
+.iconoMenu {
+    width: 2em;
+    cursor: pointer;
+}
+
+.logo {
+    width: 15em;
+    padding-bottom: 1.3em;
+}
+
+nav ul {
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    background-color: #F0EBE3;
+    width: 100%;
+    position: absolute;
+    top: 6em;
+    left: 0;
+}
+
+nav ul.mostrar {
+    display: flex;
+}
+
+nav ul li {
+    padding: 1em;
+    text-align: center;
+}
+
+nav ul li a {
+    color: #424040;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+/*fin del header/*/
+
+/*main div .contenedorModo #modo{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    max-width: 5em;
+}*/
+
+
+/*/GRID en Home/
+/definimos areas para layout*/
+.contenedor-main{
+    display: grid;
+    grid-template-areas: 
+        "area-titulo"
+        "area-parrafo"
+        "area-imagen"
+}
+
+/*a cada clase el area asignada*/
+.titulo-main{grid-area: area-titulo}
+.parrafo-main{grid-area: area-parrafo}
+.imagen-main{grid-area: area-imagen}
+
+/*layout*/
+.contenedor-main{
+    display: grid;
+    grid-template-areas:
+        "area-titulo area-titulo area-titulo"
+        ". . . "
+        "area-parrafo . ."
+        "area-parrafo area-imagen area-imagen"
+        "area-parrafo area-imagen area-imagen"
+        ". area-imagen area-imagen"
+        
+}
+
+/*estilos especifico de cada etiqueta dentro del contenedor*/
+main section img, .img-servicios{
+    width: 100%;
+    border-radius:15px;
+    max-width: 60rem;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+h2{
+    width: 100%;
+    color: #424040;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+main section p{
+    width:100%;
+    font-family: cursive;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+/*comienza el form */
+.contenedorForm{
+    background-color: #F3D0D7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2em;
+    padding: 2em 1em;
+    height: 6em;
+}
+
+form p{
+    width: 100%;
+    font-size: 1rem;
+    text-align:center;
+}
+
+.input{
+    width: 60%;
+    height: 7vh;
+    border-radius: 5px;
+    border-color: rgb(209, 209, 209);
+    text-align: center;
+}
+
+.boton{
+    margin-left: 0.8%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 35%;
+    color: #424040;
+    background: #F0EBE3;;
+    border:solid 1px #424040;
+    border-radius: 15px;
+    box-shadow: 1em;
+    padding: 0.5em;
+    text-decoration: none;
+}
+
+
+/*SECCION SOBRE MI */
+.contenedor-main_sobremi{
+    display: flex;
+    flex-direction: column;
+}
+.parrafoOculto{
+    display: none;
+}
+.parrafoVisible{
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#verMas{
+    font-weight: bold;
+}
+main section p.parrafo_sobremi, .parrafoOculto{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.contenedor_boton_hablemos{
+    padding: 1.5em;
+}
+#boton_hablemos{
+    background: #F3D0D7;
+    width: 100%;
+    margin-left: 65%;
+}
+
+/* SECCION GALERIA*/
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: dense;
+    padding: 1em;
+    grid-gap: 1em;
+}
+.galeria_img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.contenedor_item:first-child{
+    grid-row-start: span 2;
+
+}
+
+
+/* SECCION SERVICIOS*/
+.contenedor_servicios{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    
+}
+.parrafo_servicios{
+    padding:1em;
+    text-align: center;
+}
+
+.contenedor_consideraciones{
+    background:#F0EBE3;
+    padding:1em;
+}
+.contenedor_variables_tarifario{
+    background: #F3D0D7;
+    padding: 1em;
+}
+
+.tabla{
+    border: solid 1px #424040;
+    text-align: center;
+    
+    
+}
+th{
+    border: solid 1px #424040;
+    background: #bfbcbc;
+    color: #424040;
+}
+ td{
+    border: solid 1px #424040;
+}
+
+/*formulario de contacto*/
+.formContacto{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    list-style:none;
+    justify-content: center;
+    align-items: center;
+}
+
+/*estilos captcha*/
+.captcha {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem; 
+}
+
+.contenedor_dados.oculto,
+#respuestaUsuario.oculto {
+    display: none;
+}
+
+.contenedor_dados.visible,
+#respuestaUsuario.visible {
+    display: flex;
+}
+
+
+/*comienza el footer*/
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: baseline;
+    background-color: #F0EBE3;
+    width: 100%;
+    height: 7em;
+    font-size: 0.8rem;
+    color: #424040;
+    margin-top: 1em;    
+}
+
+.contenedor_elementosFooter{
+    padding-top: 1.5em;
+}
+
+.redes{
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+}    
+
+footer div a img{
+    width: 2em;    
+}
+
+.copyright{
+    font-size: 0.5rem;
+    background-color: #F0EBE3;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+
+
+/*mediaquery para galeria*/
+@media only screen and (min-width:768px){
+    .galeria{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid: auto rows 6em ;
+        padding: 1em;
+        grid-gap: 1em;
+    
+    }  
+    
+    .galeria_img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .contenedor_item:nth-child(2){
+        grid-column-start: span 2;
+    }
+    
+    .contenedor_item:nth-child(3){
+        grid-column-start:span 3;
+    }
+    
+    
+    
+    .contenedor_item:nth-child(6){
+        grid-row-end: span 2;
+        
+        
+    }
+    
+    .contenedor_item:last-child{
+        grid-column-start: span 2;
+    }
+    
+}
+    
+/*mediaquery para menu*/
+@media screen and (min-width: 660px) {
+    .iconoMenu {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background-color: transparent;
+        gap: 1em;
+    }
+
+    nav ul li {
+        padding: 0;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+    }
+}
