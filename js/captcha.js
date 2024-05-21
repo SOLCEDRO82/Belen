@@ -1,3 +1,4 @@
+"use strict"
 // CAPTCHA
 //document.querySelector("#captcha").addEventListener("click", mostrarCaptcha);
 let checkbox = document.querySelector("#check");
@@ -6,7 +7,7 @@ let respuestaUsuario = document.querySelector("#respuestaUsuario");
 let suma; 
 
 
-function mostrarCaptcha() {alert("entró");
+function mostrarCaptcha() {
     if (checkbox.checked) {
         contenedorDados.classList.remove("oculto");
         contenedorDados.classList.add("visible");

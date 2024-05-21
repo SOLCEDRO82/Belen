@@ -22,7 +22,7 @@
 <main class="contenedor_servicios" >
     <section class="seccion_servicios"></section>
     <h2>Mis Servicios</h2>
-    <p class="parrafo_servivios">El proceso de conocerme y explorar mis pasiones me llevó a formarme en Reiki, Registros Akashicos, ArteTerapia y Biodescodificación. Con el tiempo, pude integrar mi amor por el arte, la expresión y la vocación de servicio en todo lo que hago. Mis obras de arte, clases y espacio terapéutico son formas de expresar mi esencia y transmitir lo que soy. En el espacio terapéutico "Reencuentro del Alma," ofrezco un servicio que integra todas mis formaciones, permitiendo a cada persona emprender o profundizar su camino de autoconocimiento.</p>
+    <p class="parrafo_servicios">El proceso de conocerme y explorar mis pasiones me llevó a formarme en Reiki, Registros Akashicos, ArteTerapia y Biodescodificación. Con el tiempo, pude integrar mi amor por el arte, la expresión y la vocación de servicio en todo lo que hago. Mis obras de arte, clases y espacio terapéutico son formas de expresar mi esencia y transmitir lo que soy. En el espacio terapéutico "Reencuentro del Alma," ofrezco un servicio que integra todas mis formaciones, permitiendo a cada persona emprender o profundizar su camino de autoconocimiento.</p>
     <img class="img-servicios" src="./images/servicios.jpeg" alt="fotografía encuentro grupal de arte y autoconocimiento">
     </section>
     <section class="seccion_murales">
@@ -35,9 +35,11 @@
                     <li><p><span class="variable"> C </span>Organizaciones barriales sin fines de lucro y sin apoyos considerables de terceros. Particulares de pocos y medianos ingresos. Espacios de gestión independiente, autónomos y autogestivos de bajos ingresos.</p></li>
                 </ul>
         </div>
-        <div>
-            <h2>TABLA TARIFARIO</h2>
-        </div>
+        <section class="tabla_componentes">
+            <div class="contenedor_titulo-tabla">
+                <h2>TABLA TARIFARIO</h2>
+            </div>
+            <div class="contenedor_tabla">    
                 <table class="tabla">
                     <thead>
                         <tr>
@@ -117,6 +119,8 @@
                         </tr>
                     </tbody>
                 </table>
+            </div>
+        </section>
         <h2>Consideraciones</h2>        
         <div class="contenedor_consideraciones">
                 <ul class="lista_consideraciones">
@@ -148,7 +152,7 @@
             <input class="input" type="text" name="nombre" id="nombre" placeholder="Nombre" required>
             <input class="input" type="email" name="email" id="email" placeholder="email" required>
             <input class="input" type="text" id= "asunto" placeholder="Asunto"> 
-            <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+            <textarea name="mensaje" id="mensaje" cols="25" rows="10"></textarea>
 
             <div class="captcha">
                 <div>
@@ -166,23 +170,22 @@
                 </div>
             </div>
                 <input class="boton submit" type="submit" value="Enviar">    
-            
         </form>   
     </section>
 </main>
 <footer>
-    <div>
+    <div class="contenedor_elementosFooter">
         <h3>Mis redes sociales</h3>
-    <div class="redes">    
-        <a href="https://www.linkedin.com/in/belen-garcia-spikerman-a0a30a286/" target="_blank" rel="noopener noreferrer"><img src="./css/img/iconoin.png" alt="icono de linkedin"></a>
-        <a href="https://www.instagram.com/belen.garcia.spikerman/" target="_blank" rel="noopener noreferrer"><img src="./css/img/iconoig.png" alt="icono de instagram"></a>
-    </div>
+        <div class="redes">    
+            <a href="https://www.linkedin.com/in/belen-garcia-spikerman-a0a30a286/" target="_blank" rel="noopener noreferrer"><img src="./css/img/iconoin.png" alt="icono de linkedin"></a>
+            <a href="https://www.instagram.com/belen.garcia.spikerman/" target="_blank" rel="noopener noreferrer"><img src="./css/img/iconoig.png" alt="icono de instagram"></a>
+        </div>
     </div>
     <div class="copyright">
         <p>Copyright</p>
     </div>
 </footer>
+<script src="./js/menuHamburguesa.js"></script>
 <script src="./js/captcha.js"></script>
-
 </body>
 </html>

@@ -1,12 +1,4 @@
-//MENU HAMBURGUESA
 "use strict"
-
-document.querySelector(".botonMenu").addEventListener("click",toggleMenu);
-
-function toggleMenu(){
-    document.querySelector(".navegacion").classList.toggle("mostrar")
-}
-
 //PARRAFO OCULTO|VISIBLE
 function mostrarParrafo() {
     const parrafo = document.querySelector("#parrafo");
