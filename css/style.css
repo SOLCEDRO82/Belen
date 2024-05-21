@@ -17,8 +17,14 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
-    color:white;
- 
+    color:white; 
+}
+//modo claro/oscuro
+main div .contenedorModo #modo{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    max-width: 5em;
 }*/
 
 /*comienza HEADER*/
@@ -74,14 +80,6 @@ nav ul li a:hover{
     transition: ease-in-out 0.2s;
 }
 /*fin del header/*/
-
-/*//modo claro/oscuro
-main div .contenedorModo #modo{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    max-width: 5em;
-}*/
 
 /*/GRID en Home/
 /definimos areas para layout*/

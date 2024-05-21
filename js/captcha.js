@@ -1,6 +1,6 @@
 "use strict"
 // CAPTCHA
-//document.querySelector("#captcha").addEventListener("click", mostrarCaptcha);
+
 let checkbox = document.querySelector("#check");
 let contenedorDados = document.querySelector(".contenedor_dados");
 let respuestaUsuario = document.querySelector("#respuestaUsuario");
