@@ -47,78 +47,20 @@
                             <th>TIPO DE DISEÑO/EJECUCIÓN</th>
                             <th colspan="3">VALORES EXPRESADOS EN $ X M2</th>
                         </tr>
-                        <tr>
-                            <th></th>
-                            <th></th>
-                            <th>A</th>
-                            <th>B</th>
-                            <th>C</th>
-                        </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td rowspan="2">HASTA 10M2</td>
-                            <td>SIMPLE</td>
-                            <td>38360</td>
-                            <td>29500</td>
-                            <td>22700</td>
-                        </tr>
-                        <tr>
-                            <td>COMPLEJO</td>
-                            <td>57500</td>
-                            <td>44200</td>
-                            <td>34050</td>
-                        </tr>
-                
-                        <tr>
-                            <td rowspan="2">DE 10M2 A 30M2</td>
-                            <td>SIMPLE</td>
-                            <td>30700</td>
-                            <td>23600</td>
-                            <td>18160</td>
-                        </tr>
-                        <tr>
-                            <td>COMPLEJO</td>
-                            <td>48900</td>
-                            <td>37600</td>
-                            <td>27240</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="2">DE 30M2 A 50M2</td>
-                            <td>SIMPLE</td>
-                            <td>23000</td>
-                            <td>17700</td>
-                            <td rowspan="2">MÁS DE 30M2 PASA A CLIENTE B</td>
-                        </tr>
-                        <tr>
-                            <td>COMPLEJO</td>
-                            <td>34500</td>
-                            <td>26500</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="2">DE 50M2 A 100M2</td>
-                            <td>SIMPLE</td>
-                            <td>19200</td>
-                            <td>14750</td>
-                        </tr>
-                        <tr>
-                            <td>COMPLEJO</td>
-                            <td>28700</td>
-                            <td>22130</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="2">A PARTIR DE 100M2</td>
-                            <td>SIMPLE</td>
-                            <td>15400</td>
-                            <td>8850</td>
-                        </tr>
-                        <tr>
-                            <td>COMPLEJO</td>
-                            <td>23000</td>
-                            <td>13270</td>
-                        </tr>
+                    <tbody id="tablaBody">
+
                     </tbody>
+                   
                 </table>
+            </div>
+            <div>
+                <form id="form-tabla">
+                    <input type="number" nombre="dimension" placeholder="Dimensión a pintar" required>
+                    <input type="number" nombre="tipo" placeholder="Tipo de diseño" required>
+                    <input type="number" nombre="valor" placeholder="Valor expresados en $ x m2" required>
+                    <button id="btn-cargarTabla">Cargar</button>
+                </form>
             </div>
         </section>
         <h2>Consideraciones</h2>        
@@ -187,5 +129,6 @@
 </footer>
 <script src="./js/menuHamburguesa.js"></script>
 <script src="./js/captcha.js"></script>
+<script src="./js/tabla.js"></script>
 </body>
 </html>
