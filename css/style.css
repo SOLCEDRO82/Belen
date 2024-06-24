@@ -242,13 +242,12 @@ main section p.parrafo_sobremi, .parrafoOculto{
 }
 
 
-section .tabla_componentes{
-    display: flex;
-    flex-direction: column;
-}
+
 .tabla{
+    margin-top: 2rem;
     text-align: center;
 }
+
 th{
     border: solid 1px #424040;
     background: #bfbcbc;
@@ -259,18 +258,15 @@ th{
 }
 
 
-.botones-formTabla{
+.botones_formTabla{
+    margin-top: 1.5rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    font-size: 1.2rem;
+    gap: 1rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #424040;
-    background: #F3D0D7;;
-    border:solid 1px #424040;
     border-radius: 15px;
-    box-shadow: 1em;
-   
     text-decoration: none;
 
 }
