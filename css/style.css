@@ -261,8 +261,36 @@ th{
     border: solid 1px #424040;
 }
 
+
+.botones-formTabla{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 35%;
+    color: #424040;
+    background: #F0EBE3;;
+    border:solid 1px #424040;
+    border-radius: 15px;
+    box-shadow: 1em;
+    padding: 0.5em;
+    text-decoration: none;
+
+}
+
+
+
+.componente-tabla_form{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
 /*formulario de contacto*/
-.formContacto{
+.formContacto, #form-tabla{
     display: flex;
     flex-direction: column;
     gap: 1em;
