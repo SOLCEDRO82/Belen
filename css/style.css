@@ -240,10 +240,7 @@ main section p.parrafo_sobremi, .parrafoOculto{
     background:#F0EBE3;
     padding:1em;
 }
-.contenedor_variables_tarifario{
-    background: #F3D0D7;
-    padding: 1em;
-}
+
 
 section .tabla_componentes{
     display: flex;
@@ -265,26 +262,29 @@ th{
 .botones-formTabla{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     font-size: 1.2rem;
     font-weight: bold;
-    width: 35%;
     color: #424040;
-    background: #F0EBE3;;
+    background: #F3D0D7;;
     border:solid 1px #424040;
     border-radius: 15px;
     box-shadow: 1em;
-    padding: 0.5em;
+   
     text-decoration: none;
 
 }
 
-
-
-.componente-tabla_form{
+#contenedor-servicios_dinamico.tabla_componentes{
     display: flex;
     flex-direction: column;
+    align-items: center;
+
 }
+
+
+
+
 
 
 

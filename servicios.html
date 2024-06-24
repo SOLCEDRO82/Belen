@@ -25,54 +25,46 @@
     <p class="parrafo_servicios">El proceso de conocerme y explorar mis pasiones me llevó a formarme en Reiki, Registros Akashicos, ArteTerapia y Biodescodificación. Con el tiempo, pude integrar mi amor por el arte, la expresión y la vocación de servicio en todo lo que hago. Mis obras de arte, clases y espacio terapéutico son formas de expresar mi esencia y transmitir lo que soy. En el espacio terapéutico "Reencuentro del Alma," ofrezco un servicio que integra todas mis formaciones, permitiendo a cada persona emprender o profundizar su camino de autoconocimiento.</p>
     <img class="img-servicios" src="./images/servicios.jpeg" alt="fotografía encuentro grupal de arte y autoconocimiento">
     </section>
-    <section class="seccion_murales">
-        <h2>Murales </h2>
-        <div class="contenedor_variables_tarifario">
-            <h3>Variables según tipo de clientes</h3>    
-                <ul>
-                    <li><p><span class="variable"> A </span>Grandes empresas, agencias publicitarias, Instituciones o espacios de mayor impacto.</p></li>
-                    <li><p><span class="variable"> B </span>Pymes y pequeños comercios. Particulares de medianos y grandes ingresos. ONG. Instituciones de mediano impacto.</p></li>
-                    <li><p><span class="variable"> C </span>Organizaciones barriales sin fines de lucro y sin apoyos considerables de terceros. Particulares de pocos y medianos ingresos. Espacios de gestión independiente, autónomos y autogestivos de bajos ingresos.</p></li>
-                </ul>
+   
+    <section  id="contenedor-servicios_dinamico" class="tabla_componentes">
+        <div class="contenedor_titulo-tabla">
+            <h2>Talleres</h2>
         </div>
-        <section class="tabla_componentes">
-            <div class="contenedor_titulo-tabla">
-                <h2>TABLA TARIFARIO</h2>
+            <div>
+            <form id="form-tabla">
+                <input type="number" nombre="codigo" id="codigo-taller" placeholder="codigo del taller">
+                <input type="text" nombre="nombre" id="nombre-taller" placeholder="nombre del taller" required>
+                <input type="text" nombre="mes" id="mes-taller" placeholder="mes del taller" required>
+                <input type="number" nombre="precio" id="precio-taller" placeholder="precio" required>
+                <button id="btn-cargarTabla">Cargar</button>
+            </form>
+            <div class="botones_formTabla">
+                <button id="btn-agregarFila">Agregar taller</button>
+                <button id="btn-borrarFila">Borrar taller</button>
+                <button id="btn-editarFila">Editar taller</button>
             </div>
-            <div class="flex-tablaYform">
-                <div class="componente-tabla_form">
-                    <form id="form-tabla">
-                        <input type="number" nombre="codigo" id="codigo-taller" placeholder="codigo del taller">
-                        <input type="text" nombre="nombre" id="nombre-taller" placeholder="nombre del taller" required>
-                        <input type="text" nombre="mes" id="mes-taller" placeholder="mes en el que desea realizar el taller" required>
-                        <input type="number" nombre="precio" id="precio-taller" placeholder="precio" required>
-                        <button id="btn-cargarTabla">Cargar</button>
-                    </form>
-                    <div class="botones_formTabla">
-                        <button id="btn-agregarFila">Agregar Fila</button>
-                        <button id="btn-borrarFila">Borrar Fila</button>
-                        <button id="btn-editarFila">Editar Fila</button>
-                    </div>
-                        <div id="div-mensaje"><!--muestro mensaje-->
-                    </div>
-                </div>
-                <div class="contenedor_tabla">    
-                    <table  id="tabla" class="tabla">
-                        <thead>
-                            <tr>
-                                <th>CODIGO</th>
-                                <th>TALLER</th>
-                                <th>MES</th>
-                                <th>PRECIO</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tablaBody">
-                        </tbody>
-                    </table>
-                </div>
+            <div id="div-mensaje">
+                <!--muestro mensaje-->
             </div>
-        </section>
-        <h2>Consideraciones</h2>        
+            </div>
+            <div class="contenedor_tabla">    
+                <table  id="tabla" class="tabla">
+                    <thead>
+                        <tr>
+                            <th>CODIGO</th>
+                            <th>TALLER</th>
+                            <th>MES</th>
+                            <th>PRECIO</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaBody">
+                        <!--contenido de la tabla se carga dinámico-->
+                    </tbody>
+                </table>
+            </div>
+        
+    </section>
+        <h2>Murales, consideraciones</h2>        
         <div class="contenedor_consideraciones">
                 <ul class="lista_consideraciones">
                     <li>

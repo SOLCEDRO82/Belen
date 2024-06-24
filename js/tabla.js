@@ -28,8 +28,10 @@ async function cargarTabla(){//get
     } catch (error) {
         console.log(error);
     }
-}
+}//ocultar btn cargar??
 
+
+//para que aparezcan en cada fila las opciones de borrar o editar
 //<td>
 //<button class="borrar-fila" name="${talleres.id}">Borrar</button>
 //<button class="editar-fila" name="${talleres.id}">Editar</button>
@@ -41,6 +43,9 @@ cargarTabla();
 
 
 async function agregarNuevaFila(){
+    //vacío el div del mensaje
+    mensaje.innerHTML="";
+    //debería poner el input de codigo visibility hidden
     //codigo es el id que me da mockapi solo para borrar utilizo mediante el input, pero cuando agregan...
     let codigo= document.querySelector ("#codigo-taller").value;
     let nombre= document.querySelector("#nombre-taller").value;
@@ -56,12 +61,13 @@ async function agregarNuevaFila(){
         let respuesta= await fetch(url,{
             "method": "POST",
             "headers": { "Content-type": "application/json"},
-            "body": JSON.stringify(talleres)
+            "body": JSON.stringify(nuevaFila)
         });
 
         if(respuesta.status == 201){
             console.log("Nueva fila agregada");
             mensaje.innerHTML= ("Se ha agregado un nuevo taller");
+            cargarTabla();
         }
     } catch (error){
         console.log(error);
@@ -70,9 +76,9 @@ async function agregarNuevaFila(){
 
 async function borrarFila(){
     mensaje.innerHTML= "";
-    let id= document.querySelector("#codigo-taller").value;
+    let codigo= document.querySelector("#codigo-taller").value;
     try{
-        let respuesta= await fetch (`${url}/${id}`,{
+        let respuesta= await fetch (`${url}/${codigo}`,{
             method:"DELETE"
         });
         if(respuesta.status == 200){
@@ -91,8 +97,8 @@ async function editarFila(){
     let codigo= document.querySelector ("#codigo-taller").value;
     let nombre= document.querySelector("#nombre-taller").value;
     let mes= document.querySelector("#mes-taller").value;
-    let precio= document.querySelector("#precio-taller").value
-    let nuevaFila={
+    let precio= document.querySelector("#precio-taller").value;
+    let editarFila={
         "nombre": nombre,
         "mes": mes,
         "precio": precio,
@@ -101,12 +107,15 @@ async function editarFila(){
         let respuesta= await fetch(`${url}/${codigo}`,{
             "method": "PUT",
             "headers": {"Content-type": "application/json"},
-            "body": JSON.stringify (talleres)
+            "body": JSON.stringify (editarFila)
         });
 
         if(respuesta.status == 200){
             console.log("Fila Editada");
             mensaje.innerHTML= ("Se ha editado un taller");
+
+            cargarTabla();
+            
         }
     }  catch (error){
         console.log(error);
