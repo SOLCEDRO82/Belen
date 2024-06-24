@@ -1,6 +1,6 @@
 "use strict"
 
-const url= 'https://66706ba60900b5f8724a981f.mockapi.io/tarifario/tarifario';
+const url= 'https://66706ba60900b5f8724a981f.mockapi.io/taller/talleres';
 
 const tabla= document.querySelector("#tablaBody");
 
@@ -10,14 +10,20 @@ async function cargarTabla(){//get
         let respuesta= await fetch(url);
         let objeto= await respuesta.json();
         console.log(objeto);
-        //preguntar porqué con for
-        for(let tarifario of objeto){
-            let metros2= tarifario.metros2;
-            let complejidad= tarifario.complejidad;//me quedan numeros altos, necesito un random entre 1,2 y 3
-            let precio= tarifario.precio;
-            let id= tarifario.id;
-            //preguntar por id visible , sino cómo hago para editar o borrar sin mostrar el id
-            tabla.innerHTML += `<tr> <td>${metros2}</td><td>${complejidad}</td><td>${precio}</td></tr>`;
+        for(let talleres of objeto){
+            let nombre= talleres.nombre;
+            let mes= talleres.mes;
+            let precio= talleres.precio;
+            tabla.innerHTML += 
+            `<tr> 
+                <td>${nombre}</td>
+                <td>${mes}</td>
+                <td>${precio}</td>
+                <td>
+                    <button class="borrar-fila" name="${talleres.id}">Borrar</button>
+                    <button class="editar-fila" name="${talleres.id}">Editar</button>
+                </td>
+            </tr>`;
         }
     } catch (error) {
         console.log(error);
@@ -26,15 +32,31 @@ async function cargarTabla(){//get
 
 cargarTabla();
 
+let container= document.querySelector("#div-mensaje");
 async function agregarNuevaFila(){
-    FormData=
+    let nombre= document.querySelector("#nombre-taller").value;
+    let mes= document.querySelector("#mes-taller").value;
+    let precio= document.querySelector("#precio-taller").value
     //traigo cada input del form y le asigno su valor a una variable
     let nuevaFila={
-        "metros2": metros2,
-        "complejidad": complejidad,
+        "nombre": nombre,
+        "mes": mes,
         "precio": precio,
     }
+    try{
+        let respuesta= await fetch(url,{
+            "method": "POST",
+            "headers": { "Content-type": "application/json"},
+            "body": JSON.stringify(talleres)
+        });
 
+        if(respuesta.status == 201){
+            console.log("Nueva fila agregada");
+            container.innerHTML= ("Se ha agregado un nuevo taller");
+        }
+    } catch (error){
+        console.log(error);
+    }
 }
 
 async function borrarFila(){}

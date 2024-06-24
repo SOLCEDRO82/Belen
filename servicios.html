@@ -43,24 +43,24 @@
                 <table  id="tabla" class="tabla">
                     <thead>
                         <tr>
-                            <th>DIMENSIÓN A PINTAR</th>
-                            <th>TIPO DE DISEÑO/EJECUCIÓN</th>
-                            <th colspan="3">VALORES EXPRESADOS EN $ X M2</th>
+                            <th>TALLER</th>
+                            <th>MES</th>
+                            <th>PRECIO</th>
                         </tr>
                     </thead>
                     <tbody id="tablaBody">
-
                     </tbody>
-                   
                 </table>
             </div>
             <div>
                 <form id="form-tabla">
-                    <input type="number" nombre="dimension" placeholder="Dimensión a pintar" required>
-                    <input type="number" nombre="tipo" placeholder="Tipo de diseño" required>
-                    <input type="number" nombre="valor" placeholder="Valor expresados en $ x m2" required>
+                    <input type="text" nombre="nombre" id="nombre-taller" placeholder="nombre del taller" required>
+                    <input type="text" nombre="mes" id="mes-taller" placeholder="mes en el que desea realizar el taller" required>
+                    <input type="number" nombre="precio" id="precio-taller" placeholder="precio" required>
                     <button id="btn-cargarTabla">Cargar</button>
                 </form>
+                <div id="div-mensaje"> <!--muestro mensaje-->
+                </div>
             </div>
         </section>
         <h2>Consideraciones</h2>        
