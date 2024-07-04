@@ -138,4 +138,4 @@ document.querySelector("#btn-editarFila").addEventListener("click", editarFila);
 // agregar botones de borrar y editar a cada fila y el form 
 //puede aparecer según el evento para que 
 //aparezcan solo los inputs que necesito
-//revisar que se pueden agregar filas vacías
+//revisar que se pueden agregar filas vacías*/
